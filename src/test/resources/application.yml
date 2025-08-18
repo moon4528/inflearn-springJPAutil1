@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/jpashop    #;MVCC=TURE는 제외
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hitbernate:
+#        show_sql: time   >> scout을 통해 찍음
+        format_sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug  #log를 통해 찍음
+    org.hibernate.orm.jdbc.bind: trace
+
